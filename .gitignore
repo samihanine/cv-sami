@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Compilation LaTeX / latexmk
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
