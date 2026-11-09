@@ -1,0 +1,231 @@
+\documentclass[a4paper,10pt]{article}
+
+% ---- Packages ----
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+\setlength{\tabcolsep}{0pt}
+\DeclareUnicodeCharacter{202F}{~}
+
+% ---- Colonnes pour tabularx ----
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{0.72\linewidth}}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{0.28\linewidth}}
+
+% ---- Formatage des titres ----
+\titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\titlerule]
+
+% ---- Commandes personnalisées & paramètres de liste ----
+\newcommand{\resumeSubheading}[4]{%
+  \item
+    \begin{tabularx}{\linewidth}{L R}
+      \textbf{#1} & \textit{\footnotesize #2} \\
+      \textit{\footnotesize #3} & \footnotesize #4 \\
+    \end{tabularx}
+}
+
+\newcommand{\resumeSubHeadingListStart}{%
+  \begin{itemize}[leftmargin=0cm, label={}, itemsep=1pt, topsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.5em, label=--, noitemsep, topsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeItem}[1]{\item #1}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{3mm}
+  \begin{tcolorbox}[colback=gray!20, colframe=white, boxsep=4pt]
+    \textbf{\large #1}
+  \end{tcolorbox}
+  \vspace{2mm}
+}
+
+% ---- Informations personnelles ----
+\newcommand{\name}{Sami Hanine}
+\newcommand{\phone}{+33 7 59 54 09 57}
+\newcommand{\emaila}{sami.hanine.1@ens.etsmtl.ca}
+\newcommand{\website}{https://samihanine.fr}
+\newcommand{\github}{https://github.com/samihanine}
+\newcommand{\linkedin}{http://linkedin.com/in/sami-hanine-a685201b9/}
+
+% ---- Document ----
+\begin{document}
+
+% En-tête
+\noindent
+\begin{minipage}[c]{2.6cm}
+  {\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.8pt}%
+   \fcolorbox{gray!60}{white}{\includegraphics[width=2.6cm]{photo-sami.jpg}}}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{\dimexpr\linewidth-3.0cm\relax}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{6.2cm}@{}}
+    \textbf{\Large \name} & \phone \ \faPhone \\
+    Ingénieur spécialisé en IA et analyse de données   & \href{mailto:\emaila}{\emaila} \ \faEnvelope \\
+    \textit{Diplômé de l'ÉTS et de HEC Montréal} & \href{\website}{samihanine.fr} \ \faGlobe \\
+    \textit{Bilingue anglais \& français} & \href{\github}{github.com/samihanine} \ \faGithub \\
+    \textit{Paris, France} &  \href{\linkedin}{linkedin.com/in/sami-hanine} \ \faLinkedin
+  \end{tabularx}
+\end{minipage}
+
+% ---- Formation ----
+\cvsection{Formation}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Diplôme d'ingénieur -- ÉTS Montréal}{Sept. 2022 -- Fév. 2027}{Spécialité informatique}{}
+
+  \resumeSubheading
+    {\hspace{1em}\textbullet\ Membre du club finance}{Sept. 2025 -- Présent}{\hspace{2.5em}Plateforme de trading sur les marchés}{}
+
+  \resumeSubheading
+    {\hspace{1em}\textbullet\ Semestre d'échange à Taïwan}{Fév. 2025 -- Juin 2025}{\hspace{2.5em}Axé sur l'apprentissage automatique}{}
+
+  \resumeSubheading
+    {Programme entrepreneurial -- HEC Montréal}{Jan. 2024 -- Avr. 2024}{Construction d'une startup en incubateur}{}
+
+  \resumeSubheading
+    {Diplôme en informatique -- Université Claude Bernard}{Sept. 2020 -- Juin 2022}{Diplôme universitaire de technologie en informatique}{}
+\resumeSubHeadingListEnd
+
+% ---- Expériences ----
+\cvsection{Expériences}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Stage de coordination de projet Data et Supply Chain pour le groupe LVMH}{Sept. 2026 -- Fév. 2027}{Maison Dior -- Paris, France}{}
+    \resumeItemListStart
+    \resumeItem{Gestion d’un projet de centralisation des données supply chain au sein d’une \textbf{data factory}.}
+    \resumeItem{Recueil et analyse des besoins \textbf{Business Intelligence} auprès des différents métiers de la \textbf{supply chain}.}
+    \resumeItem{Coordination avec les équipes IT pour convertir les \textbf{besoins opérationnels} en livrables fonctionnels.}
+    \resumeItemListEnd
+    \vspace{2mm}
+
+  \resumeSubheading
+    {Stage dans un laboratoire de recherche en Intelligence Artificielle}{Sept. 2025 -- Déc. 2025}{Croesus Fintech -- Montréal, Canada}{}
+    \resumeItemListStart
+      \resumeItem{Développement de pipelines ML/LLM pour l'analyse de portefeuilles.}
+      \resumeItem{Entraînement de modèles avec \textbf{Unsloth} et \textbf{PyTorch}, orchestrés via \textbf{Databricks} et \textbf{MLflow}.}
+      \resumeItem{Amélioration de la précision du modèle de \textbf{17\%} et déploiement accessible depuis le cloud.}
+    \resumeItemListEnd
+    \vspace{2mm}
+
+  \resumeSubheading
+    {Co-fondateur et directeur d'une agence de services informatiques}{Mars 2023 -- Aug. 2026}{Otopio -- Montréal, Canada}{}
+    \resumeItemListStart
+      \resumeItem{Traduction des besoins clients en solutions techniques évolutives intégrant l'\textbf{IA}.}
+      \resumeItem{Développement de produits en \textbf{TypeScript}, hébergés sur \textbf{AWS}, avec des tableaux de bord \textbf{Power BI}.}
+      \resumeItem{Collaboration avec \textbf{20+ clients} et maintien d'applications utilisées par des milliers d'utilisateurs.}
+    \resumeItemListEnd
+    \vspace{2mm}
+
+  \resumeSubheading
+    {Stage en analyse de données dans une startup fintech en Californie}{Sept. 2023 -- Déc. 2023}{Finance It Forward -- Los Angeles, États-Unis}{}
+    \resumeItemListStart
+      \resumeItem{Automatisation de l'analyse de données financières pour la comparaison de prêts.}
+      \resumeItem{Extraction et classification de données avec le \textbf{NLP} via \textbf{Hugging Face}, et mise en place d'un \textbf{RAG} avec \textbf{LangChain}.}
+      \resumeItem{Analyses entièrement automatisées qui nécessitaient jusqu'à \textbf{8 heures par semaine} aux employés.}
+    \resumeItemListEnd
+    \vspace{2mm}
+\resumeSubHeadingListEnd
+
+% ---- Compétences techniques ----
+\cvsection{Compétences techniques}
+\begin{itemize}[leftmargin=0.2cm, label={}, itemsep=1pt, topsep=0pt]
+  \item \textbf{Intelligence artificielle} : Fine-tuning, Unsloth, NLP, PyTorch, TensorFlow, LLM, Hugging Face, scikit-learn, RAG, bases de données vectorielles, LangChain, LangGraph, agents IA, OpenRouter, MLflow, MLOps
+  \item \textbf{Données} : Pandas, NumPy, SQL, prétraitement des données, ETL \& pipelines de données, web scraping, BigQuery, Snowflake, Databricks, Jupyter Notebook
+  \item \textbf{Code \& Automatisation} : Python, TypeScript, JavaScript, Go, SQL, Java, C\#, C, C++, PHP, VBA, React, Docker, Git, PostgreSQL, MySQL, Firebase, AWS, Linux/Unix
+\end{itemize}
+
+\newpage
+
+% ---- Commandes d'espacement page 2 ----
+\newcommand{\projListStart}{%
+  \begin{itemize}[leftmargin=0cm, label={}, itemsep=10pt, topsep=0pt]}
+\newcommand{\projListEnd}{\end{itemize}}
+
+\newcommand{\projItemStart}{\begin{itemize}[leftmargin=1.5em, label=--, itemsep=4pt, topsep=2pt]}
+\newcommand{\projItemEnd}{\end{itemize}}
+
+\cvsection{Projets personnels}
+\projListStart
+
+  % ---- medic.pub ----
+  \resumeSubheading
+    {Medic.pub : Logiciel de gestion de cabinet médical}{}{\href{https://www.medic.pub/}{medic.pub}}{2026}
+    \projItemStart
+      \resumeItem{\textbf{Contexte :} Mission réalisée en tant que prestataire pour Otopio.}
+      \resumeItem{\textbf{Objectif :} Permettre la connexion à des machines médicales pour un logiciel de gestion de cabinet.}
+      \resumeItem{\textbf{Comment :} Mise en place d'un flux \textbf{ETL} pour collecter les données brutes des machines, les nettoyer, les transformer et les envoyer vers le cloud.}
+      \resumeItem{\textbf{Résultat :} Intégration de deux sources de données (\textbf{HL7} et \textbf{EDFv2}) normalisées au format \textbf{FHIR}.}
+    \projItemEnd
+
+  % ---- AlgoETS ----
+  \resumeSubheading
+    {AlgoETS : Automatisation du trading avec l'IA}{}{\href{https://algoets.etsmtl.ca}{algoets.etsmtl.ca}}{2025}
+    \projItemStart
+      \resumeItem{\textbf{Contexte :} Travail pour le club finance de mon école.}
+      \resumeItem{\textbf{Objectif :} Permettre aux utilisateurs de générer des modèles d'automatisation de trading adaptés à leur propre portefeuille.}
+      \resumeItem{\textbf{Comment :} Combinaison de modèles de trading statistiques avec un \textbf{LLM} qui convertit des requêtes en langage naturel en paramètres de modèle.}
+      \resumeItem{\textbf{Résultat :} Démo fonctionnelle et intégration de fonctionnalités pour une plateforme avec \textbf{100+ utilisateurs}.}
+    \projItemEnd
+
+  % ---- Oragius ----
+  \resumeSubheading
+    {Oragius : Prédiction du niveau d'eau}{}{\href{https://b2bhint.com/fr/company/ca-qc/les-solutions-oragius-inc--1180974140}{oragius.ca}}{2025}
+    \projItemStart
+      \resumeItem{\textbf{Contexte :} Projet de recherche avec un professeur de l'ÉTS, entrepreneur en résidence au Centech.}
+      \resumeItem{\textbf{Objectif :} Prédire les niveaux d'eau à partir d'un ensemble de données statistiques.}
+      \resumeItem{\textbf{Comment :} Prévision de séries temporelles avec un \textbf{LSTM} (\textbf{TensorFlow}, Python) sur des données historiques.}
+      \resumeItem{\textbf{Résultat :} Atteinte d'une précision de \textbf{59\%} entre les jeux de données d'entraînement et de test.}
+    \projItemEnd
+
+  % ---- MTA Region ----
+  \resumeSubheading
+    {MTARegion : Analyse du comportement utilisateur}{}{\href{https://mtaregion.com/}{mtaregion.com}}{2024}
+    \projItemStart
+      \resumeItem{\textbf{Contexte :} Mission en freelance pour une entreprise de tourisme offrant des réductions aux utilisateurs dans les commerces locaux.}
+      \resumeItem{\textbf{Objectif :} Analyser les données de comportement utilisateur et évaluer la rentabilité.}
+      \resumeItem{\textbf{Comment :} Jointure des données financières (\textbf{Stripe}) avec les données utilisateurs dans \textbf{PostgreSQL} pour alimenter des tableaux de bord.}
+      \resumeItem{\textbf{Résultat :} Analyse et catégorisation des données de \textbf{10 000+ clients}.}
+    \projItemEnd
+
+  % ---- Coordia ----
+  \resumeSubheading
+    {Coordia : Collecte de données patients}{}{\href{https://www.coordia.ca/}{coordia.ca}}{2024}
+    \projItemStart
+      \resumeItem{\textbf{Contexte :} Mission réalisée en tant que prestataire pour Otopio.}
+      \resumeItem{\textbf{Objectif :} Collecter des données patients pour un logiciel de gestion de cabinet ortho-médical.}
+      \resumeItem{\textbf{Comment :} Mise en place de l'analytique \textbf{PostHog} et développement de tableaux de bord \textbf{BI} personnalisés adaptés au produit.}
+      \resumeItem{\textbf{Résultat :} \textbf{50 000+} points de données traités, analysés et catégorisés chaque mois.}
+    \projItemEnd
+
+  % ---- Nautilus OS ----
+  \resumeSubheading
+    {Nautilus OS : Système d'exploitation simulé}{}{\href{https://github.com/samihanine/nautilius-os-batch}{github.com/samihanine/nautilius-os-batch}}{2016}
+    \projItemStart
+      \resumeItem{\textbf{Contexte :} Projet réalisé sur plus d'un an, entre 13 et 14 ans.}
+      \resumeItem{\textbf{Objectif :} Simuler un système d'exploitation dans la console.}
+      \resumeItem{\textbf{Comment :} Développement d'un système de mémoire en \textbf{C} et de scripts d'automatisation en \textbf{VBA} et \textbf{Batch} pour contrôler l'ordinateur.}
+      \resumeItem{\textbf{Résultat :} Création de \textbf{8 applications complètes} dont un explorateur de fichiers, un éditeur de texte et l'accès/contrôle des périphériques.}
+    \projItemEnd
+
+\projListEnd
+
+\end{document}
