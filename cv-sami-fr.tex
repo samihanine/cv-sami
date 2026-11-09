@@ -16,6 +16,8 @@
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
 
+\definecolor{lightblue}{HTML}{DCEAF7}
+
 \geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
 \pagestyle{fancy}
 \fancyhf{}
@@ -51,7 +53,7 @@
 
 \newcommand{\cvsection}[1]{%
   \vspace{3mm}
-  \begin{tcolorbox}[colback=gray!20, colframe=white, boxsep=4pt]
+  \begin{tcolorbox}[colback=lightblue, colframe=white, boxsep=4pt]
     \textbf{\large #1}
   \end{tcolorbox}
   \vspace{2mm}
@@ -63,7 +65,7 @@
 \newcommand{\emaila}{sami.hanine.1@ens.etsmtl.ca}
 \newcommand{\website}{https://samihanine.fr}
 \newcommand{\github}{https://github.com/samihanine}
-\newcommand{\linkedin}{http://linkedin.com/in/sami-hanine-a685201b9/}
+\newcommand{\linkedin}{https://linkedin.com/in/sami-hanine-a685201b9/}
 
 % ---- Document ----
 \begin{document}
@@ -79,7 +81,7 @@
   \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{6.2cm}@{}}
     \textbf{\Large \name} & \phone \ \faPhone \\
     Ingénieur spécialisé en IA et analyse de données   & \href{mailto:\emaila}{\emaila} \ \faEnvelope \\
-    \textit{Diplômé de l'ÉTS et de HEC Montréal} & \href{\website}{samihanine.fr} \ \faGlobe \\
+    \textit{Formé à l'ÉTS et à HEC Montréal} & \href{\website}{samihanine.fr} \ \faGlobe \\
     \textit{Bilingue anglais \& français} & \href{\github}{github.com/samihanine} \ \faGithub \\
     \textit{Paris, France} &  \href{\linkedin}{linkedin.com/in/sami-hanine} \ \faLinkedin
   \end{tabularx}
@@ -101,7 +103,7 @@
     {Programme entrepreneurial -- HEC Montréal}{Jan. 2024 -- Avr. 2024}{Construction d'une startup en incubateur}{}
 
   \resumeSubheading
-    {Diplôme en informatique -- Université Claude Bernard}{Sept. 2020 -- Juin 2022}{Diplôme universitaire de technologie en informatique}{}
+    {Diplôme en informatique -- Université Claude Bernard Lyon 1}{Sept. 2020 -- Juin 2022}{Diplôme universitaire de technologie en informatique}{}
 \resumeSubHeadingListEnd
 
 % ---- Expériences ----
@@ -109,11 +111,11 @@
 \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Stage en gestion de projet d'analyse de données pour la supply chain de Dior}{Sept. 2026 -- Fév. 2027}{Maison Dior - LVMH -- Paris, France}{}
+    {Stage en gestion de projet d'analyse de données pour la supply chain de Dior}{Sept. 2026 -- Fév. 2027}{Maison Dior (LVMH) -- Paris, France}{}
     \resumeItemListStart
-    \resumeItem{Recueil des besoins auprès des équipes business et coordination avec l'équipe IT pour leur réalisation.}
-    \resumeItem{Rôle de Product Manager (PM) : priorisation, coordination, specifications, documentations, tests et support.}
-    \resumeItem{Intégration d'outils IA pour automatiser les processus de la supply chain et faire gagner du temps aux équipes.}
+    \resumeItem{\textbf{Recueil des besoins} auprès des \textbf{équipes business} et coordination avec l'\textbf{équipe IT} pour leur réalisation.}
+    \resumeItem{Rôle de \textbf{Product Manager (PM)} : \textbf{priorisation}, coordination, \textbf{spécifications}, documentation, \textbf{tests} et support.}
+    \resumeItem{Intégration d'\textbf{outils IA} pour \textbf{automatiser les processus} de la \textbf{supply chain} et faire gagner du temps aux équipes.}
     \resumeItemListEnd
     \vspace{2mm}
 
@@ -127,7 +129,7 @@
     \vspace{2mm}
 
   \resumeSubheading
-    {Co-fondateur et directeur d'une agence de services informatiques}{Mars 2023 -- Aug. 2026}{Otopio -- Montréal, Canada}{}
+    {Co-fondateur et directeur d'une agence de services informatiques}{Mars 2023 -- Août 2026}{Otopio -- Montréal, Canada}{}
     \resumeItemListStart
       \resumeItem{Traduction des besoins clients en solutions techniques évolutives intégrant l'\textbf{IA}.}
       \resumeItem{Développement de produits en \textbf{TypeScript}, hébergés sur \textbf{AWS}, avec des tableaux de bord \textbf{Power BI}.}
@@ -140,7 +142,7 @@
     \resumeItemListStart
       \resumeItem{Automatisation de l'analyse de données financières pour la comparaison de prêts.}
       \resumeItem{Extraction et classification de données avec le \textbf{NLP} via \textbf{Hugging Face}, et mise en place d'un \textbf{RAG} avec \textbf{LangChain}.}
-      \resumeItem{Analyses entièrement automatisées qui nécessitaient jusqu'à \textbf{8 heures par semaine} aux employés.}
+      \resumeItem{Automatisation complète d'analyses qui mobilisaient jusqu'à \textbf{8 heures par semaine} des employés.}
     \resumeItemListEnd
     \vspace{2mm}
 \resumeSubHeadingListEnd
@@ -150,7 +152,7 @@
 \begin{itemize}[leftmargin=0.2cm, label={}, itemsep=1pt, topsep=0pt]
   \item \textbf{Intelligence artificielle} : Fine-tuning, Unsloth, NLP, PyTorch, TensorFlow, LLM, Hugging Face, scikit-learn, RAG, bases de données vectorielles, LangChain, LangGraph, agents IA, OpenRouter, MLflow, MLOps
   \item \textbf{Données} : Pandas, NumPy, SQL, prétraitement des données, ETL \& pipelines de données, web scraping, BigQuery, Snowflake, Databricks, Jupyter Notebook, Power BI
-  \item \textbf{Code \& Automatisation} : Python, TypeScript, JavaScript, Go, SQL, Java, C\#, C, C++, PHP, VBA, React, Docker, Git, PostgreSQL, MySQL, Firebase, AWS, Linux/Unix
+  \item \textbf{Code \& Automatisation} : Python, TypeScript, JavaScript, Go, Java, C\#, C, C++, PHP, VBA, React, Docker, Git, PostgreSQL, MySQL, Firebase, AWS, Linux/Unix
 \end{itemize}
 
 \newpage
@@ -180,7 +182,7 @@
   \resumeSubheading
     {AlgoETS : Automatisation du trading avec l'IA}{}{\href{https://algoets.etsmtl.ca}{algoets.etsmtl.ca}}{2025}
     \projItemStart
-      \resumeItem{\textbf{Contexte :} Travail pour le club finance de mon école.}
+      \resumeItem{\textbf{Contexte :} Projet pour le club finance de l'ÉTS.}
       \resumeItem{\textbf{Objectif :} Permettre aux utilisateurs de générer des modèles d'automatisation de trading adaptés à leur propre portefeuille.}
       \resumeItem{\textbf{Comment :} Combinaison de modèles de trading statistiques avec un \textbf{LLM} qui convertit des requêtes en langage naturel en paramètres de modèle.}
       \resumeItem{\textbf{Résultat :} Démo fonctionnelle et intégration de fonctionnalités pour une plateforme avec \textbf{100+ utilisateurs}.}
@@ -193,7 +195,7 @@
       \resumeItem{\textbf{Contexte :} Projet de recherche avec un professeur de l'ÉTS, entrepreneur en résidence au Centech.}
       \resumeItem{\textbf{Objectif :} Prédire les niveaux d'eau à partir d'un ensemble de données statistiques.}
       \resumeItem{\textbf{Comment :} Prévision de séries temporelles avec un \textbf{LSTM} (\textbf{TensorFlow}, Python) sur des données historiques.}
-      \resumeItem{\textbf{Résultat :} Atteinte d'une précision de \textbf{59\%} entre les jeux de données d'entraînement et de test.}
+      \resumeItem{\textbf{Résultat :} Précision de \textbf{59\%} obtenue sur le jeu de données de test.}
     \projItemEnd
 
   % ---- MTA Region ----
